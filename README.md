@@ -13,3 +13,5 @@ The goal of this project was to develop a novel method to detect and mitigate bi
 7. Repeating all trials 5 times to minimize training variance.
 
 Server.py includes a script to run a live demo of the model at http://detoxifai.com.
+
+This project was completed between October of 2018 and January 2020 (with majority of the code written between November 2018 and February 2019).
