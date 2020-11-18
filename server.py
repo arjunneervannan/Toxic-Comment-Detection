@@ -107,10 +107,6 @@ def chromeextn():
     comment = request.args.get('comment', None)
     text = str(comment.encode('utf-8'))
 
-    # ip_addr = request.args.get('ip', None)
-    # email_addr = request.args.get('user', None)
-    # docname = "GoogleDocs - docname: " + request.args.get('docname', None)
-    # st = datetime.datetime.fromtimestamp(time.time()).strftime('%Y-%m-%d %H:%M:%S')
     doc = nlp(unicode(text, "utf-8"))
     sentences_temp = [sent.string.strip() for sent in doc.sents]
     sentences = [sent.replace(u'\xa0', u' ') for sent in sentences_temp]
@@ -187,17 +183,6 @@ def chromeextn():
 
     ret_json = [{"index": t, "html": s} for t, s in zip(index, html)]
     logging.debug(ret_json)
-
-    # if len(toxic_wordlist) > 0:
-    #     df = pd.DataFrame({"User/EMail ID": email_addr, "IP Address": ip_addr,
-    #                        "Date/Time": st, "Mode": docname,
-    #                        "Toxic Words Used": [toxic_wordlist]})
-    #
-    #     if not os.path.isfile('report.csv'):
-    #         df.to_csv('report.csv', header='column_names', index=False)
-    #     else:  # else it exists so append without writing the header
-    #         df.to_csv('report.csv', mode='a', header=False, index=False)
-
     return json.dumps(ret_json)
 
 
@@ -215,19 +200,9 @@ def gmailextn():
 
     nlp = English()
     nlp.add_pipe(nlp.create_pipe('sentencizer'))
-    #
-    # comment = request.args.get('comment', None)
-    # text = str(comment.encode('utf-8'))
-    # ip_addr = request.args.get('ip', None)
-    # email_addr = request.args.get('user', None)
-    # st = datetime.datetime.fromtimestamp(time.time()).strftime('%Y-%m-%d %H:%M:%S')
 
     comment = request.args.get('comment', None)
     text = str(comment.encode('utf-8'))
-    # ip_addr = request.args.get('ip', None)
-    # email_addr = request.args.get('user', None)
-    # docname = "Gmail"
-    # st = datetime.datetime.fromtimestamp(time.time()).strftime('%Y-%m-%d %H:%M:%S')
 
     doc = nlp(unicode(text, "utf-8"))
     sentences = [sent.string.strip() for sent in doc.sents]
@@ -303,17 +278,6 @@ def gmailextn():
 
     ret_json = [{"index": t, "html": s} for t, s in zip(index, html)]
     logging.debug(ret_json)
-
-    # if len(toxic_wordlist) > 0:
-    #     df = pd.DataFrame({"User/EMail ID": email_addr, "IP Address": ip_addr,
-    #                        "Date/Time": st, "Mode": docname,
-    #                        "Toxic Words Used": [toxic_wordlist]})
-    #
-    #     if not os.path.isfile('report.csv'):
-    #         df.to_csv('report.csv', header='column_names', index=False)
-    #     else:  # else it exists so append without writing the header
-    #         df.to_csv('report.csv', mode='a', header=False, index=False)
-
     return json.dumps(ret_json)
 
 
