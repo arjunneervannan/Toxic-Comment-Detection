@@ -11,3 +11,5 @@ The goal of this project was to develop a novel method to detect and mitigate bi
 5. Augmenting the training dataset with these words, grid-searching over number of comments per words and number of words, and retraining for each of these steps (completed in main.py)
 6. Picking the best model out of these (based on a metric that measures percent change in False Positive Equality Difference; completed in main.py)
 7. Repeating all trials 5 times to minimize training variance.
+
+Server.py includes a script to run a live demo of the model at http://detoxifai.com.
