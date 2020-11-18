@@ -4,7 +4,7 @@ This repository contains the code for the project "Combating Cyberbullying and T
 
 The goal of this project was to develop a novel method to detect and mitigate bias in an toxic comment detection algorithm. There were a couple steps to this:
 
-1. Preprocessing data (completed in preprocessing.py)
+1. Preprocessing data (completed in data.py)
 2. Building the initial baseline model (completed in model.py)
 3. Training the model on 100k comments, and testing it (completed in main.py)
 4. Detecting biases by using attention weights to find words that model was most biased against (completed in main.py)
