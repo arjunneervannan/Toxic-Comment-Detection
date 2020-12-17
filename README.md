@@ -25,3 +25,16 @@ https://newsroom.regeneron.com/news-releases/news-release-details/teen-scientist
 https://parentology.com/meet-2-of-the-regeneron-science-talent-search-2020-finalists-changing-the-world/
 
 https://fisher.wharton.upenn.edu/mt-for-life/arjun-neervannan-mt-24-on-combating-cyberbullying-with-ai-and-winning-one-of-the-regeneron-sts-scholarship-prizes/
+
+# Project Structure
+
+model.py - constructs the model (including attention layer), and contains a method to return the attention weights for a particular word.
+
+data.py - contains methods to preprocess the data and tokenize the data. Also contains data for post-processing (TF-IDF).
+
+main.py - includes all debiasing steps of the process. Trains the model on existing data, finds biases (using attention weights), and augments data back into the dataset.
+
+server.py - used to host the most debiased model on detoxifai.com.
+
+# Results
+
