@@ -38,3 +38,22 @@ server.py - used to host the most debiased model on detoxifai.com.
 
 # Results
 
+![alt text](https://github.com/arjunneervannan/Toxic-Comment-Detection/blob/main/images/Screen%20Shot%202020-12-16%20at%2010.16.30%20PM.png?raw=true)
+
+*Bias % Change before and after debiasing process*
+
+![alt text](https://github.com/arjunneervannan/Toxic-Comment-Detection/blob/main/images/Screen%20Shot%202020-12-16%20at%2010.16.22%20PM.png?raw=true)
+
+*AUC (Area under Curve, Accuracy Metric) after debiasing*
+
+![alt text](https://github.com/arjunneervannan/Toxic-Comment-Detection/blob/main/images/Screen%20Shot%202020-12-16%20at%2010.16.42%20PM.png?raw=true)
+
+*Predictions before and after debiasing*
+
+![alt text](https://github.com/arjunneervannan/Toxic-Comment-Detection/blob/main/images/Screen%20Shot%202020-12-16%20at%2010.17.54%20PM.png?raw=true)
+
+*DetoxifAI Demo*
+
+![alt text](https://github.com/arjunneervannan/Toxic-Comment-Detection/blob/main/images/Screen%20Shot%202020-12-16%20at%2010.18.00%20PM.png?raw=true)
+
+*DetoxifAI Demo*
