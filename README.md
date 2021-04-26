@@ -2,8 +2,6 @@
 
 This repository contains the code for the project "Combating Cyberbullying and Toxicity by Teaching AI to Use Linguistic Insights from Human Interactions in Social Media", which won the 10th place prize at the Regeneron STS Competition, the oldest and most prestigious science fair in the US.
 
-**Read the draft paper here:** https://github.com/arjunneervannan/Toxic-Comment-Detection/blob/main/FAT__Conference.pdf
-
 The goal of this project was to develop a novel method to detect and mitigate bias in an toxic comment detection algorithm. There were a couple steps to this:
 
 1. Preprocessing data (completed in data.py)
